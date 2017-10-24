@@ -982,6 +982,6 @@ describe('SmartBanner', function() {
       let element = document.querySelector('.js_smartbanner');
       expect(element).not.to.exist;
       done();
-    });
   });
+
 });
