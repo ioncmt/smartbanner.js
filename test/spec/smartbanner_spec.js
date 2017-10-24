@@ -74,8 +74,7 @@ describe('SmartBanner', function() {
     </body>
   </html>`;
   
-  const HTML_PREPEND_TO_SPECIFIC_TARGET =
-    `<!doctype html>
+  const HTML_PREPEND_TO_SPECIFIC_TARGET = `<!doctype html>
     <html style="margin-top:10px;">
     <head>
       <meta charset="utf-8">
@@ -98,8 +97,7 @@ describe('SmartBanner', function() {
     </body>
   </html>`;
 
-  const HTML_APPEND_TO_BODY =
-    `<!doctype html>
+  const HTML_APPEND_TO_BODY = `<!doctype html>
     <html style="margin-top:10px;">
     <head>
       <meta charset="utf-8">
@@ -120,8 +118,7 @@ describe('SmartBanner', function() {
     </body>
   </html>`;
 
-  const HTML_APPEND_TO_SPECIFIC_TARGET =
-    `<!doctype html>
+  const HTML_APPEND_TO_SPECIFIC_TARGET = `<!doctype html>
     <html style="margin-top:10px;">
     <head>
       <meta charset="utf-8">
@@ -149,8 +146,7 @@ describe('SmartBanner', function() {
     'https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js'
   ];
 
-  const IOS_BODY =
-    `<div class="smartbanner smartbanner--ios js_smartbanner">
+  const IOS_BODY = `<div class="smartbanner smartbanner--ios js_smartbanner">
       <a href="javascript:void();" class="smartbanner__exit js_smartbanner__exit"></a>
       <div class="smartbanner__icon" style="background-image: url(icon--apple.jpg);"></div>
       <div class="smartbanner__info">
@@ -430,20 +426,20 @@ describe('SmartBanner', function() {
         </body>
       </html>`;
 
-        before(function() {
+      before(function() {
         global.window = jsdom.jsdom(HTML_WITH_PLATFROM_OPTION_ANDROID_INCLUDE_IOS9, { userAgent: USER_AGENT_IPHONE_IOS9 }).defaultView;
-          global.document = window.document;
-          global.getComputedStyle = window.getComputedStyle;
-          smartbanner = new SmartBanner();
-        });
-
-        it('expected to add iOS template to body', function() {
-          smartbanner.publish();
-          let html = document.querySelector('.js_smartbanner').outerHTML;
-          expect(html).to.eql(IOS_BODY);
-        });
-
+        global.document = window.document;
+        global.getComputedStyle = window.getComputedStyle;
+        smartbanner = new SmartBanner();
       });
+
+      it('expected to add iOS template to body', function() {
+        smartbanner.publish();
+        let html = document.querySelector('.js_smartbanner').outerHTML;
+        expect(html).to.eql(IOS_BODY);
+      });
+
+    });
 
     context('when enabled-platform set to android, but opened on iOS 9 webapp which is included by include-user-agent-regex but ' +
       'excluded by exclude-user-agent-regex', function() {
@@ -469,19 +465,19 @@ describe('SmartBanner', function() {
         </body>
       </html>`;
 
-        before(function() {
+      before(function() {
         global.window = jsdom.jsdom(HTML_WITH_PLATFROM_OPTION_ANDROID_INCLUDE_IOS9_EXCLUDE_WEBAPP, { userAgent: USER_AGENT_IPHONE_CUSTOM_WEBAPP }).defaultView;
-          global.document = window.document;
-          global.getComputedStyle = window.getComputedStyle;
-          smartbanner = new SmartBanner();
-          smartbanner.publish();
-        });
-
-        it('expected to not add anything to body', function() {
-          expect(document.querySelector('.js_smartbanner')).to.be.null;
-        });
-
+        global.document = window.document;
+        global.getComputedStyle = window.getComputedStyle;
+        smartbanner = new SmartBanner();
+        smartbanner.publish();
       });
+
+      it('expected to not add anything to body', function() {
+        expect(document.querySelector('.js_smartbanner')).to.be.null;
+      });
+
+    });
 
     context('when enabled-platform set to ios, but opened on Android', function() {
       const HTML_WITH_PLATFROM_OPTION_IOS = `<!doctype html>
@@ -801,11 +797,11 @@ describe('SmartBanner', function() {
           done: function(err, window) {
             global.window = jsdom.jsdom(HTML, { userAgent: USER_AGENT_IPHONE_IOS9 }).defaultView;
 
-            global.document = window.document;
-            global.getComputedStyle = window.getComputedStyle;
-            smartbanner = new SmartBanner();
-            smartbanner.publish();
-            done();
+			global.document = window.document;
+			global.getComputedStyle = window.getComputedStyle;
+			smartbanner = new SmartBanner();
+			smartbanner.publish();
+			done();
           }
         });
       });
@@ -855,11 +851,11 @@ describe('SmartBanner', function() {
           done: function(err, window) {
             global.window = jsdom.jsdom(HTML, { userAgent: USER_AGENT_IPHONE_IOS9 }).defaultView;
 
-            global.document = window.document;
-            global.getComputedStyle = window.getComputedStyle;
-            smartbanner = new SmartBanner();
-            smartbanner.publish();
-            done();
+			global.document = window.document;
+			global.getComputedStyle = window.getComputedStyle;
+			smartbanner = new SmartBanner();
+			smartbanner.publish();
+			done();
           }
         });
       });
@@ -909,11 +905,11 @@ describe('SmartBanner', function() {
           done: function(err, window) {
             global.window = jsdom.jsdom(HTML, { userAgent: USER_AGENT_IPHONE_IOS9 }).defaultView;
 
-            global.document = window.document;
-            global.getComputedStyle = window.getComputedStyle;
-            smartbanner = new SmartBanner();
-            smartbanner.publish();
-            done();
+			global.document = window.document;
+			global.getComputedStyle = window.getComputedStyle;
+			smartbanner = new SmartBanner();
+			smartbanner.publish();
+			done();
           }
         });
       });
@@ -943,11 +939,11 @@ describe('SmartBanner', function() {
         done: function(err, window) {
          global.window = jsdom.jsdom(HTML, { userAgent: USER_AGENT_IPHONE_IOS9 }).defaultView;
 
-          global.document = window.document;
-          global.getComputedStyle = window.getComputedStyle;
-          smartbanner = new SmartBanner();
-          smartbanner.publish();
-          done();
+			global.document = window.document;
+			global.getComputedStyle = window.getComputedStyle;
+			smartbanner = new SmartBanner();
+			smartbanner.publish();
+			done();
         }
       });
     });
