@@ -82,15 +82,18 @@ If you want to position smart app banner yourself (e.g. in CSS), you can disable
 
 If you want to position the smart app banner yourself and need to append or prepend the smart app banner to a particular element, you can do this with either:
 ```html
-<meta name="smartbanner:prepend-target" content=".custom_target">
+<meta name="smartbanner:prepend-target" content=".custom_target1">
 ```
 
 or:
 ```html
-<meta name="smartbanner:append-target" content=".custom_target">
+<meta name="smartbanner:append-target" content=".custom_target2">
 ```
 
-Both previous options take a standard selector as content value and automatically disable positioning.
+Both previous options take a standard selector as content value and automatically disable positioning. Please note that if both options are present, the prepend target option is taken into account in prority and the smart app banner is automatically prepended to the target specified
+
+### Event emission
+When the user clicks on the close button or the install button, the respective smartbanner.exit and smartbanner.view events will be dispatched on the container of the smartbanner. If an option was added to append or prepend the smart app banner to a specific target, the events will be dispatched to this target
 
 ### Hide the smartbanner completely
 
