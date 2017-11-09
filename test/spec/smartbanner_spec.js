@@ -977,11 +977,12 @@ describe('SmartBanner', function() {
       done();
     });
 
-    it('expected banner to be removed on exit', function(done) {
-      smartbanner.exit();
-      let element = document.querySelector('.js_smartbanner');
-      expect(element).not.to.exist;
-      done();
+	it('expected banner to be removed on exit', function(done) {
+	  smartbanner.exit();
+	  let element = document.querySelector('.js_smartbanner');
+	  expect(element).not.to.exist;
+	  done();
+	});
   });
 
 });
