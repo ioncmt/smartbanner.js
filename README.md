@@ -8,7 +8,9 @@ Customisable smart app banner for iOS and Android.
 - Pure JavaScript, no jQuery (14 KB in size)
 - ECMAScript 6 source
 - Default [Smart App Banner](https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/PromotingAppswithAppBanners/PromotingAppswithAppBanners.html) like design
-- Customisable design using `smartbanner--<platform>` class on wrapper
+- Customisable design by using
+  - automatically generated `smartbanner--<platform>` class on wrapper
+  - [custom design modifier](#custom-design-modifier) for externally defined styles or same design on all platforms
 - Fully customisable info
 - Close button that
   - closes the banner
@@ -75,6 +77,7 @@ If you want to position smart app banner yourself (e.g. in CSS), you can disable
 ```html
 <meta name="smartbanner:disable-positioning" content="true">
 ```
+
 ### Hide the smartbanner completely
 
 If you want to prevent smartbanner rendering in some html pages, you can add optional `meta` tag:
@@ -90,6 +93,26 @@ By default smartbanner would not reappear if closed. This can be prevented with 
 ```html
 <meta name="smartbanner:hide-ttl" content="10000">
 ```
+
+### Custom design modifier
+
+smartbanner uses built-in platform-specific styles (e.g. `smartbanner--ios` or `smartbanner--android`), but this behaviour can be altered by adding custom design modifier that allows use of:
+
+- externally defined styles, e.g.:
+
+    ```html
+    <meta name="smartbanner:custom-design-modifier" content="mysite.com">
+    ```
+
+    which would add `smartbanner--mysite.com` class on wrapper.
+
+- forced platform-specific styles on all platforms, e.g.:
+
+    ```html
+    <meta name="smartbanner:custom-design-modifier" content="ios">
+    ```
+
+    which would add `smartbanner--ios` class on wrapper regardless of actual platform.
 
 ## Contributing
 

@@ -1,6 +1,6 @@
 {
   "name": "smartbanner.js",
-  "version": "1.7.0",
+  "version": "1.8.0",
   "description": "Customisable smart app banner for iOS and Android",
   "homepage": "https://github.com/ain/smartbanner.js",
   "author": {
@@ -48,7 +48,7 @@
     "watch:css": "npm run build:css | npm run autoprefix -- -w",
     "test": "node_modules/mocha/bin/mocha --compilers js:babel-core/register test/spec/*.js",
     "test:watch": "npm run test -- -w",
-    "server": "http-server dist/ -o"
+    "start": "http-server dist/ -o"
   },
   "keywords": [
     "javascript",
