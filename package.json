@@ -1,6 +1,6 @@
 {
   "name": "smartbanner.js",
-  "version": "1.8.0-cmt1",
+  "version": "1.8.0-cmt2",
   "description": "Customisable smart app banner for iOS and Android",
   "homepage": "https://github.com/ain/smartbanner.js",
   "author": {
@@ -62,6 +62,7 @@
     "dist",
     "*.md",
     "LICENSE",
-    "package.json"
+    "package.json",
+    "bower.json"
   ]
 }
