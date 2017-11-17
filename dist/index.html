@@ -16,6 +16,8 @@
   <meta name="smartbanner:enabled-platforms" content="android,ios">
   <!--<meta name="smartbanner:hide-ttl" content="2629746000">-->
   <!--<meta name="smartbanner:disable-positioning" content="true">-->
+  <!--<meta name="smartbanner:prepend-target" content="#target1">-->
+  <!--<meta name="smartbanner:append-target" content="#target2">-->
   <!-- Enable for all platforms -->
   <!--<meta name="smartbanner:include-user-agent-regex" content=".*">-->
   <!--<meta name="smartbanner:custom-design-modifier" content="ios">-->
@@ -24,6 +26,8 @@
 </head>
 <body>
   <h1>&nbsp;</h1>
+  <div id="target1"></div>
+  <div id="target2"></div>
   <script>
     var onLoadHandlerForConflictTesting = function() {};
     window.onload = onLoadHandlerForConflictTesting;
