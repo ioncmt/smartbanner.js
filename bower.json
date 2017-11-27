@@ -2,8 +2,8 @@
   "name": "smartbanner.js",
   "description": "Customisable smart app banner for iOS and Android",
   "main": [
-    "dist/smartbanner.min.js",
-    "dist/smartbanner.min.css"
+    "dist/smartbanner.js",
+    "dist/smartbanner.css"
   ],
   "authors": [
     "Ain Tohvri <ain@flashbit.net>"

@@ -2,7 +2,7 @@ import SmartBanner from './smartbanner.js';
 
 let smartbanner;
 
-window.addEventListener('load', function() {
+window.initSmartbanner = function() {
   smartbanner = new SmartBanner();
   smartbanner.publish();
-});
+};

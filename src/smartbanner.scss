@@ -20,14 +20,14 @@ $blue: #1474fc;
 
     position: absolute;
     top: calc(50% - 6px);
-    left: 9px;
+    left: 5px;
 
     display: block;
     margin: 0;
 
 
-    width: 12px;
-    height: 12px;
+    width: 21px;
+    height: 21px;
 
     border: 0;
 
@@ -122,8 +122,8 @@ $blue: #1474fc;
       left: 6px;
 
       margin-right: 7px;
-      width: 17px;
-      height: 17px;
+      width: 21px;
+      height: 21px;
 
       border-radius: 14px;
       background: #1c1e21;
@@ -138,8 +138,8 @@ $blue: #1474fc;
 
       &::before,
       &::after {
-        top: 3px;
-        left: 8px;
+        top: 5px;
+        left: 10px;
 
         width: 2px;
         height: 11px;
